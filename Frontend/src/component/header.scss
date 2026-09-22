@@ -1,0 +1,705 @@
+.app-header {
+    width: 100%;
+    height: 68px;
+
+    background: rgba(9, 13, 20, 0.97);
+    border-bottom: 1px solid #252d3b;
+
+    color: #e6edf3;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(14px);
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, sans-serif;
+
+    &__container {
+        width: 100%;
+        max-width: 1400px;
+        height: 100%;
+
+        margin: 0 auto;
+        padding: 0 2rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* ================= BRAND ================= */
+
+    &__brand {
+        border: none;
+        outline: none;
+        background: transparent;
+
+        padding: 0;
+        margin: 0;
+
+        display: flex;
+        align-items: center;
+
+        gap: 0.8rem;
+
+        cursor: pointer;
+        text-align: left;
+
+        min-width: 300px;
+    }
+
+    /* ================= NAVIGATION ================= */
+
+    &__nav {
+        display: flex;
+        align-items: center;
+
+        gap: 0.45rem;
+
+        height: 100%;
+    }
+
+    /* ================= PROFILE ================= */
+
+    &__profile {
+        position: relative;
+
+        min-width: 220px;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+
+/* =====================================================
+   BRAND
+===================================================== */
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 11px;
+
+    background: rgba(255, 45, 120, 0.1);
+    border: 1px solid rgba(255, 45, 120, 0.35);
+
+    color: #ff3f86;
+
+    font-size: 1.3rem;
+
+    box-shadow:
+        0 0 20px rgba(255, 45, 120, 0.08);
+
+    transition: all 0.2s ease;
+
+    .app-header__brand:hover & {
+        background: rgba(255, 45, 120, 0.16);
+
+        border-color: rgba(255, 45, 120, 0.5);
+
+        box-shadow:
+            0 0 25px rgba(255, 45, 120, 0.14);
+
+        transform: translateY(-1px);
+    }
+}
+
+
+.brand-content {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.brand-name {
+    color: #f5f7fa;
+
+    font-size: 1.35rem;
+    font-weight: 750;
+
+    line-height: 1;
+
+    letter-spacing: -0.03em;
+
+    span {
+        color: #ff2d78;
+    }
+}
+
+
+.brand-tagline {
+    color: #8b95a5;
+
+    font-size: 0.72rem;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav-link {
+    height: 42px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #aeb7c5;
+
+    padding: 0 1.05rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.55rem;
+
+    border-radius: 0.65rem;
+
+    font-size: 0.82rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: #f1f5f9;
+        background: #171d27;
+    }
+
+    &--active {
+        color: #ff4f91;
+
+        background: rgba(255, 45, 120, 0.12);
+
+        &:hover {
+            color: #ff6b9d;
+            background: rgba(255, 45, 120, 0.15);
+        }
+    }
+}
+
+
+.nav-icon {
+    font-size: 1.05rem;
+    line-height: 1;
+}
+
+
+/* =====================================================
+   PROFILE
+===================================================== */
+
+.profile-button {
+    border: 1px solid transparent;
+    outline: none;
+
+    background: transparent;
+
+    color: #e6edf3;
+
+    padding: 0.3rem 0.5rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.65rem;
+
+    border-radius: 0.7rem;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+        background: #161c25;
+        border-color: #2b3545;
+    }
+}
+
+
+.profile-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff2d78,
+        #ff4f91
+    );
+
+    color: white;
+
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 45, 120, 0.07),
+        0 5px 18px rgba(255, 45, 120, 0.15);
+}
+
+
+.profile-user-info {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 3px;
+}
+
+
+.profile-name {
+    max-width: 120px;
+
+    color: #f1f5f9;
+
+    font-size: 0.84rem;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.profile-role {
+    color: #6fd8d1;
+
+    font-size: 0.68rem;
+}
+
+
+.profile-arrow {
+    color: #8a94a3;
+
+    font-size: 0.8rem;
+
+    transition: transform 0.2s ease;
+
+    &--open {
+        transform: rotate(180deg);
+    }
+}
+
+
+/* =====================================================
+   PROFILE DROPDOWN
+===================================================== */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: calc(100% + 0.65rem);
+    right: 0;
+
+    width: 310px;
+
+    padding: 0.8rem;
+
+    background: rgba(12, 17, 25, 0.98);
+
+    border: 1px solid #2c3748;
+
+    border-radius: 0.9rem;
+
+    box-shadow:
+        0 22px 50px rgba(0, 0, 0, 0.5),
+        0 5px 15px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(18px);
+
+    animation: profileDropdownOpen 0.16s ease-out;
+}
+
+
+/* User Information */
+
+.dropdown-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 0.8rem;
+
+    padding: 0.5rem;
+}
+
+
+.dropdown-avatar {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #ff2d78,
+        #ff4f91
+    );
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.dropdown-user {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    strong {
+        color: #f1f5f9;
+
+        font-size: 0.9rem;
+        font-weight: 650;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    span {
+        color: #8b95a5;
+
+        font-size: 0.72rem;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
+
+
+/* Career Explorer */
+
+.career-badge {
+    width: fit-content;
+
+    margin-top: 0.3rem;
+
+    padding: 0.3rem 0.55rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.35rem;
+
+    border-radius: 999px;
+
+    background: rgba(35, 201, 169, 0.12);
+
+    color: #5de0c5 !important;
+
+    font-size: 0.67rem !important;
+}
+
+
+.badge-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #42d9b9;
+
+    box-shadow:
+        0 0 7px rgba(66, 217, 185, 0.6);
+}
+
+
+/* Divider */
+
+.dropdown-divider {
+    height: 1px;
+
+    background: #293342;
+
+    margin: 0.65rem 0;
+}
+
+
+/* Dropdown Item */
+
+.dropdown-item {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 0.65rem 0.55rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    border-radius: 0.55rem;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.18s ease;
+
+    &:hover {
+        background: #19202a;
+
+        .dropdown-item-icon {
+            color: #ff4f91;
+
+            border-color:
+                rgba(255, 45, 120, 0.3);
+
+            background:
+                rgba(255, 45, 120, 0.06);
+        }
+
+        .dropdown-arrow {
+            color: #ff6b9d;
+
+            transform: translateX(2px);
+        }
+    }
+}
+
+
+.dropdown-item-icon {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #171e28;
+
+    border: 1px solid #293444;
+
+    color: #b1bbc9;
+
+    font-size: 1rem;
+
+    transition: all 0.18s ease;
+}
+
+
+.dropdown-item-content {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+
+    strong {
+        color: #e6edf3;
+
+        font-size: 0.82rem;
+        font-weight: 550;
+    }
+
+    small {
+        color: #7f8999;
+
+        font-size: 0.67rem;
+    }
+}
+
+
+.dropdown-arrow {
+    color: #596474;
+
+    font-size: 1.25rem;
+
+    transition: all 0.18s ease;
+}
+
+
+/* Logout */
+
+.logout-button {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    padding: 0.7rem 0.55rem;
+
+    display: flex;
+    align-items: center;
+
+    gap: 0.7rem;
+
+    border-radius: 0.55rem;
+
+    color: #ff5d9b;
+
+    font-size: 0.82rem;
+    font-weight: 550;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.18s ease;
+
+    &:hover {
+        background: rgba(255, 45, 120, 0.08);
+
+        color: #ff2d78;
+    }
+}
+
+
+.logout-icon {
+    font-size: 1.05rem;
+}
+
+
+/* Animation */
+
+@keyframes profileDropdownOpen {
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-7px)
+            scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .app-header__container {
+        padding: 0 1.25rem;
+    }
+
+    .app-header__brand {
+        min-width: 240px;
+    }
+
+    .brand-tagline {
+        font-size: 0.65rem;
+    }
+
+    .nav-link {
+        padding: 0 0.7rem;
+
+        span:not(.nav-icon) {
+            display: none;
+        }
+    }
+
+    .app-header__profile {
+        min-width: 190px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .app-header {
+        height: 62px;
+    }
+
+    .app-header__container {
+        padding: 0 1rem;
+    }
+
+    .app-header__brand {
+        min-width: auto;
+    }
+
+    .brand-icon {
+        width: 34px;
+        height: 34px;
+
+        font-size: 1.1rem;
+    }
+
+    .brand-name {
+        font-size: 1.05rem;
+    }
+
+    .brand-tagline {
+        display: none;
+    }
+
+    .app-header__nav {
+        display: none;
+    }
+
+    .app-header__profile {
+        min-width: auto;
+    }
+
+    .profile-user-info {
+        display: none;
+    }
+
+    .profile-button {
+        padding: 0.2rem;
+    }
+
+    .profile-dropdown {
+        width: 290px;
+
+        right: -0.3rem;
+    }
+}

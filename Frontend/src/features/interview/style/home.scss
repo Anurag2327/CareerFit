@@ -371,3 +371,43 @@ $font-stack:     system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Robot
         }
     }
 }
+.delete-report-button {
+    margin-top: 0.5rem;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 1px solid #2a3348;
+    background: transparent;
+    color: #ff6b9d;
+    border-radius: 0.5rem;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+
+    overflow: hidden;
+    transition: all 0.2s ease;
+
+    .delete-icon {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .delete-text {
+        display: none;
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+
+    &:hover {
+        width: 75px;
+        background-color: rgba(255, 45, 120, 0.1);
+        border-color: #ff2d78;
+
+        .delete-text {
+            display: inline;
+        }
+    }
+}

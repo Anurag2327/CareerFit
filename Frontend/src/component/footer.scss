@@ -1,0 +1,312 @@
+.app-footer {
+    width: 100%;
+
+    background: #090d14;
+
+    border-top: 1px solid #252d3b;
+
+    color: #e6edf3;
+
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, sans-serif;
+
+
+    /* =========================================
+       MAIN FOOTER
+    ========================================= */
+
+    &__container {
+        width: 100%;
+        max-width: 1400px;
+
+        margin: 0 auto;
+
+        padding: 2.5rem 2rem 2rem;
+
+        display: grid;
+
+        grid-template-columns:
+            2fr 1fr 1.2fr 1fr 1.2fr;
+
+        gap: 2.5rem;
+    }
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.footer-brand {
+    max-width: 310px;
+}
+
+
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.6rem;
+}
+
+
+.footer-logo-icon {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: rgba(255, 45, 120, 0.1);
+
+    border: 1px solid rgba(255, 45, 120, 0.28);
+
+    color: #ff2d78;
+
+    font-size: 0.85rem;
+
+    box-shadow:
+        0 0 15px rgba(255, 45, 120, 0.07);
+}
+
+
+.footer-logo h2 {
+    margin: 0;
+
+    color: #f5f7fa;
+
+    font-size: 1.2rem;
+
+    font-weight: 750;
+
+    letter-spacing: -0.025em;
+
+
+    span {
+        color: #ff2d78;
+    }
+}
+
+
+.footer-tagline {
+    margin: 0.55rem 0 0;
+
+    color: #ff6b9d;
+
+    font-size: 0.72rem;
+
+    font-weight: 500;
+}
+
+
+.footer-description {
+    margin: 0.7rem 0 0;
+
+    max-width: 290px;
+
+    color: #727d8d;
+
+    font-size: 0.75rem;
+
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   COLUMNS
+========================================= */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 0.55rem;
+
+
+    h3 {
+        margin: 0 0 0.4rem;
+
+        color: #e6edf3;
+
+        font-size: 0.78rem;
+
+        font-weight: 600;
+
+        letter-spacing: 0.01em;
+    }
+
+
+    a,
+    span {
+        color: #737e8e;
+
+        text-decoration: none;
+
+        font-size: 0.72rem;
+
+        line-height: 1.4;
+
+        transition:
+            color 0.2s ease,
+            transform 0.2s ease;
+    }
+
+
+    a:hover {
+        color: #ff6b9d;
+
+        transform: translateX(2px);
+    }
+}
+
+
+/* =========================================
+   DEVELOPER
+========================================= */
+
+.developer-name {
+    color: #aeb7c5 !important;
+
+    font-weight: 500;
+}
+
+
+.portfolio-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 0.35rem;
+
+    color: #ff6b9d !important;
+
+    font-weight: 500;
+}
+
+
+.portfolio-link span {
+    color: inherit !important;
+
+    font-size: 0.85rem !important;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    padding: 0.9rem 2rem;
+
+    border-top: 1px solid #202836;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    color: #697485;
+
+    font-size: 0.68rem;
+
+
+    strong {
+        color: #9ba5b4;
+
+        font-weight: 500;
+    }
+}
+
+
+.footer-made {
+    display: flex;
+
+    align-items: center;
+
+    gap: 0.25rem;
+}
+
+
+.heart {
+    color: #ff2d78;
+
+    font-size: 0.72rem;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 950px) {
+
+    .app-footer__container {
+        grid-template-columns:
+            1.5fr 1fr 1fr;
+
+        gap: 2rem;
+    }
+
+
+    .footer-brand {
+        grid-column: 1 / -1;
+
+        max-width: 450px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .app-footer__container {
+        grid-template-columns: 1fr;
+
+        padding: 2rem 1.25rem 1.5rem;
+
+        gap: 1.5rem;
+    }
+
+
+    .footer-brand {
+        grid-column: auto;
+
+        max-width: 100%;
+    }
+
+
+    .footer-description {
+        max-width: 100%;
+    }
+
+
+    .footer-bottom {
+        padding: 0.9rem 1.25rem;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 0.4rem;
+    }
+}

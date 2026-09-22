@@ -57,3 +57,8 @@ export const generateResumePdf = async ({ interviewReportId }) => {
 
     return response.data
 }
+
+export const deleteInterviewReport = async (interviewId) => {
+    const response = await api.delete(`/api/interview/report/${interviewId}`)
+    return response.data
+}

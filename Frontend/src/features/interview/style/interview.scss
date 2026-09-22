@@ -21,7 +21,7 @@ $severity-low: #3fb950;
 // ── Page Shell ────────────────────────────────────────────────────────────────
 .interview-page {
     width: 100%;
-    min-height: 100vh;
+    min-height: calc(100vh - 64px);
     background-color: $bg-page;
     color: $text-primary;
     font-family: $font-stack;
