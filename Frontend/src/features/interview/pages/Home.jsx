@@ -31,7 +31,6 @@ const Home = () => {
 
     return (
         <>
-            <Header />
             <div className='home-page'>
 
                 {/* Page Header */}
@@ -191,7 +190,6 @@ const Home = () => {
                 )}
 
             </div>
-            <Footer />
         </>
     )
 }

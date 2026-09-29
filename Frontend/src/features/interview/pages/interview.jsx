@@ -74,7 +74,6 @@ const Interview = () => {
     if (loading || !report) {
         return (
             <>
-                <Header />
                 <main className='loading-screen'>
                     <h1>Loading your interview plan...</h1>
                 </main>
@@ -89,7 +88,6 @@ const Interview = () => {
 
     return (
         <>
-            <Header />
             <div className='interview-page'>
                 <div className='interview-layout'>
 
@@ -195,7 +193,6 @@ const Interview = () => {
                     </aside>
                 </div>
             </div>
-            <Footer />
         </>
     )
 }
